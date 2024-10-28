@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class kkk {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number");
+        int n = sc.nextInt();
+        double []numbers = new double[n];
+        double sum = 0;
+        System.out.println("Enter numbers");
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextDouble();
+            sum += numbers[i];
+        }
+        double average = sum/n;
+        int counter = 0;
+        for (int i = 0; i < n; i++) {
+            if (numbers[i] == average) {
+                counter++;
+            }
+        }
+        System.out.println("Average is " + average);
+        System.out.println("Number of elements is " + counter);
+    }
+}
